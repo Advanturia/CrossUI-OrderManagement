@@ -11,27 +11,29 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.APICaller")
                 .setHost(host,"api_list")
+                .setName("api_list")
                 .setQueryURL("{xui.constant.request_url}")
-                .setProxyType("auto")
                 .setQueryArgs({
                     "key" : "orders",
                     "paras" : {
                         "action" : "list"
                     }
                 })
+                .setProxyType("auto")
             );
             
             append(
                 xui.create("xui.APICaller")
                 .setHost(host,"api_del")
+                .setName("api_del")
                 .setQueryURL("{xui.constant.request_url")
-                .setProxyType("auto")
                 .setQueryArgs({
                     "key" : "orders",
                     "paras" : {
                         "action" : "delete"
                     }
                 })
+                .setProxyType("auto")
             );
             
             append(
@@ -394,16 +396,18 @@ xui.Class('App', 'xui.Module',{
             
             host.ctl_block3.append(
                 xui.create("xui.UI.Label")
-                .setHost(host,"ctl_slabel28")
-                .setLeft("3.2916666666666665em")
-                .setTop("0.7916666666666666em")
-                .setCaption("Manage Orders")
+                .setHost(host,"xui_ui_label10")
+                .setLeft("3.0476190476190474em")
+                .setTop("0.7619047619047619em")
+                .setWidth("10em")
+                .setHeight("1.9047619047619047em")
+                .setCaption("Titre Application")
                 .setCustomStyle({
                     "KEY" : {
-                        "font-size" : "18pt",
-                        "font-weight" : "normal",
-                        "color" : "#000080",
-                        "text-shadow" : "0px 0px 8px #20B2AA"
+                        "color" : "#DC143C",
+                        "font-size" : "14px",
+                        "font-weight" : "bolder",
+                        "text-align" : "center"
                     }
                 })
             );
